@@ -1,0 +1,7 @@
+## isalpha()  karakter dizisinin alfabetik olup olmadığını sorgular.
+
+
+a = "ahmet"
+print(a.isalpha())
+a = "12345"
+print(a.isalpha())
