@@ -1,0 +1,5 @@
+## isidentifier()   karakter dizisinin tanımlayıcı olup olmadığını sorgular.
+
+## değişken adı tanımlama kuralları
+print("1a".isidentifier())
+print("a1".isidentifier())
