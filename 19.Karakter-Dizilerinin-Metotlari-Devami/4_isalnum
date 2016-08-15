@@ -1,0 +1,11 @@
+## isalnum()  karakter dizisinin alfanümerik(alfabetik+sayısal) olup olmadığını sorgular.
+
+
+a = "ahmet"
+print(a.isalnum())
+a = "12345"
+print(a.isalnum())
+a = "abc123"
+print(a.isalnum())
+a = "abc123<9"
+print(a.isalnum())
