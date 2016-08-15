@@ -1,0 +1,12 @@
+## str.maketrans(), translate()
+
+
+## ornek_1
+kaynak = "şçöğüıŞÇÖĞÜİ"
+hedef = "scoguiSCOGUI"
+
+çeviri_tablosu = str.maketrans(kaynak, hedef)   ## bu kullanım şekli sözlük kullanımına örnektir.
+
+metin = "Bildiğiniz gibi, internet üzerinde bazen Türkçe karakterleri kullanamıyoruz."
+
+print(metin.translate(çeviri_tablosu))
