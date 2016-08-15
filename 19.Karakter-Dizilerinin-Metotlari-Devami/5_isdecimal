@@ -1,0 +1,7 @@
+## isdecimal()  karakter dizisinin ondalık sayı olup olmadığını sorgular.
+
+
+a = "123"
+print(a.isdecimal())
+a = "123.45"
+print(a.isdecimal())
