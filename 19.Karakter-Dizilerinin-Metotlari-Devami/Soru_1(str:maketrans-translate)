@@ -1,0 +1,46 @@
+Soru-1: Örnek olarak verilmiş bir metindeki tüm sesli harfleri silmek
+
+##sesliler = {"a": "",
+##            "e": "",
+##            "ı": "",
+##            "i": "",
+##            "o": "",
+##            "ö": "",
+##            "u": "",
+##            "ü": "",
+##    }
+
+
+########kaynak = "aeıioöuü"
+########hedef = "--------"
+########ceviri = str.maketrans(kaynak, hedef)
+
+ornek_metin = """
+Bu programlama dili Guido Van Rossum adlı Hollandalı bir programcı tarafından
+90’lı yılların basında gelistirilmeye baslanmıstır. Çogu insan, isminin Python
+olmasına bakarak, bu programlama dilinin, adını piton yılanından aldıgını
+düsünür. Ancak zannedildiginin aksine bu programlama dilinin adı piton
+yılanından gelmez. Guido Van Rossum bu programlama dilini, The Monty Python
+adlı bir Ingiliz komedi grubunun, Monty Python's Flying Circus adlı
+gösterisinden esinlenerek adlandırmıstır. Ancak her ne kadar gerçek
+böyle olsa da, Python programlama dilinin pek çok yerde bir yılan figürü
+ile temsil edilmesi neredeyse bir gelenek halini almıştır diyebiliriz.
+"""
+
+sesliler = "aeioöuü"
+
+sil = str.maketrans("","",sesliler)
+
+print(ornek_metin.translate(sil))
+
+########print(ornek_metin.translate(ceviri))
+
+##############sesliler = "aeıioöuü"
+##############
+##############yeni_metin = ("")
+##############
+##############for i in ornek_metin:
+##############    if not i in sesliler:
+##############        yeni_metin += i
+##############
+##############print(yeni_metin)
