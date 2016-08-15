@@ -1,0 +1,13 @@
+## isprintable()  karakter dizisinin basılabilir karakterlerden oluştuğunu kontrol eder.
+
+
+a = " "
+print(a.isprintable())
+a = "1"
+print(a.isprintable())
+a = "a"
+print(a.isprintable())
+a = "\n"
+print(a.isprintable())
+a = "jh654as65khs\n"
+print(a.isprintable())
