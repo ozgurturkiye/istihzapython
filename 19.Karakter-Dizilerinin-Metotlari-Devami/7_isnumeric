@@ -1,0 +1,8 @@
+## isnumeric() karakter dizisinin nümerik yani; sayısal değerli olup
+## olmadığını sorgular.
+
+
+a = "ahmet"
+print(a.isnumeric())
+a = "12345"
+print(a.isnumeric())
