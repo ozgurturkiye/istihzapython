@@ -1,0 +1,7 @@
+## isdigit()  karakter dizisinin sayısal olup olmadığını sorgular.
+
+
+a = "ahmet"
+print(a.isdigit())
+a = "12345"
+print(a.isdigit())
