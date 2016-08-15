@@ -1,0 +1,46 @@
+## Nufus Cuzdani - Kullanıcıdan kimlik bilgilerini alarak;bu bilgileri
+##                  nüfus cüzdanı şablonuna yerleştiren program
+
+print("....Lütfen Kimlik Bilgilerinizi giriniz.....")
+TC      = input("TC No.............:")
+soyad   = input("Soyadınız.........:")
+ad      = input("Adınız............:")
+baba_ad = input("Baba Adınız.......:")
+ana_ad  = input("Anne Adınız.......:")
+
+nufus_cuzdani_sablon = """
+********************************************
+********************************************
+*                     |                    *
+*                     |                    *
+*                     |                    *
+*                     |                    *
+*                     |                    *
+*                     |                    *
+*                     |                    *
+*                     |                    *
+*                     |                    *
+*                     |                    *
+*                     |                    *
+*                     |                    *
+*------------------------------------------*
+* T.C. KİMLİK NO : %(TC)s                  *
+*------------------------------------------*
+* SOYADI         : %(soyad)s               *
+*------------------------------------------*
+* ADI            : %(ad)s                  *
+*------------------------------------------*
+* BABA ADI       : %(baba_ad)s             *
+*------------------------------------------*
+* ANA ADI        : %(ana_ad)s              *
+*------------------------------------------*
+* D.Y.:               |D.T.:               *
+*------------------------------------------*
+********************************************
+"""
+
+print(nufus_cuzdani_sablon % {"TC": TC,
+                              "soyad": soyad,
+                              "ad": ad,
+                              "baba_ad": baba_ad,
+                              "ana_ad": ana_ad})
