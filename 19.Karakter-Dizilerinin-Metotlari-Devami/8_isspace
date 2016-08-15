@@ -1,0 +1,11 @@
+## isspace()  karakter dizisinin tamamının boşluk karakteri olup olmadığını sorgular.
+
+
+a = ""
+print(a.isspace())
+a = "12df"
+print(a.isspace())
+a = " "
+print(a.isspace())
+a = "      "
+print(a.isspace())
