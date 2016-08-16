@@ -1,7 +1,7 @@
 ## Nufus Cuzdani - Kullanıcıdan kimlik bilgilerini alarak;bu bilgileri
 ##                  nüfus cüzdanı şablonuna yerleştiren program
-## Satır 31 için bilgilendirme -format metodunda 0. index değerini 24 karakter içinde sola yasla yapar
-## Satır 33 için bilgilendirme -format metodunda 1. index değerini 24 karakter içinde sola yasla yapar
+## Satır 35 için bilgilendirme -format metodunda 0. index değerini 24 karakter içinde sola yasla yapar
+## Satır 37 için bilgilendirme -format metodunda 1. index değerini 24 karakter içinde sola yasla yapar
 
 print("....Lütfen Kimlik Bilgilerinizi giriniz.....")
 TC      = input("TC No.............:")
@@ -11,6 +11,10 @@ baba_ad = input("Baba Adınız.......:").upper()
 ana_ad  = input("Anne Adınız.......:").upper()
 d_yeri  = input("Doğum Yeriniz.....:").upper()
 d_tarih = input("Doğum Tarihiniz...:").upper()
+
+#Doğum yeri 10 karakterden uzunsa 10 karakterden sonrasını kırpıyoruz(sığmıyor :))
+if len(d_yeri) > 10:
+	d_yeri = d_yeri[:10] #0. karakterden 10. karaktere kadar al
 
 nufus_cuzdani_sablon = """
 ********************************************
