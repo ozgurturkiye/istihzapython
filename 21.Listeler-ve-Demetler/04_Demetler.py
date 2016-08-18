@@ -20,3 +20,8 @@ demet = ('elma', 'armut', 'kiraz')
 demet[0]   # 'elma' öğesine ulaşırız
 
 #indeksleme ve dilimleme kuralları aynen demetler için de geçerlidir.
+
+#Demetlerle Listelerin Birbirinden Farkı --> Başta söyledik
+
+#Demetlere öğe eklemek
+demet += ("KARPUZ",)  #Demet ile yalnızca demeti birleştirebilirsin.
