@@ -26,7 +26,7 @@ giriş = """
 print(giriş)
 
 while True:
-    soru = input("Girmek istediğiniz ürünün numarasını girin \n (Çıkmak için q): ")
+    soru = input("Girmek istediğiniz ürünün numarasını girin \n (Çıkmak için q): \n YAZDIRMAK İÇİN(4) ")
 
     if soru == "q":
         print("çıkılıyor...")
@@ -49,13 +49,15 @@ while True:
 
     elif soru == "4":
     	print("Hesaplanıyor....")
-    	print(masa1[cay])
-    	print(fiyatlar[cay])
-    	print(masa1[cay] * fiyatlar[cay])
     	print("Toplam cay ucreti = {}TL".format(masa1[cay] * fiyatlar[cay]))
     	print("Toplam kahve ucreti = {}TL".format(masa1[kahve] * fiyatlar[kahve]))
     	print("Toplam su ucreti = {}TL".format(masa1[su] * fiyatlar[su]))
-    	
+    	#Bu kısımda for döngüsü kullanılarak 2 liste toplam ücreti bulmak için sıra ile birbiri ile çarpılacak
+    	toplam = 0
+    	for i in range(len(masa1)):
+    		toplam += masa1[i] * fiyatlar[i]
+    	print("HESAP: {}TL".format(toplam))
+    		
     	#print("Toplam ödenmesi gereken tutar {}TL".format())
     	#print("Toplam çay fiyatı {}  {}".format(masa1[cay], fiyatlar[cay])
     else:
