@@ -1,0 +1,201 @@
+#####LISTELER#####
+
+## ornek_1
+list1 = ["oge1","oge2","oge3"]
+print(type(list1))
+
+## ornek_2
+list2 = ["Ahmet","mehmet",2,4.3]
+print(type(list2))
+
+## ornek_3
+list3 = ["Ahmet","mehmet",["oge1","oge2","oge3"],2,4.3]
+print(type(list3))
+
+## ornek_4
+for i in list3:
+    print("{}. elemanının tipi...:{}".format(i,type(i)))
+
+## 1 - liste öğelerini yazdır
+
+## ornek_1
+languages = ["Türkçe","İngilizce","Almanca"]
+print(len(languages))
+
+
+## ornek_2
+numbers = [[0,10],[6,60],[12,54],[67,99]]
+for i in numbers:
+    print(*range(*i))
+
+
+numbers = [[0,10],[6,60],[12,54],[67,99]]
+for i in numbers:
+    print(i)
+
+## 2 - list() fonksiyonu ornekler
+
+## ornek_1
+alfabe = "abcçdefgğhıijklmnoöprsştuüvyz"
+harf_listesi = list(alfabe)
+print(harf_listesi)
+
+
+## ornek_2
+print(range(10))
+
+print("--------")
+
+for i in range(10):
+    print(i, end = "")
+
+print("--------")
+
+print(list(range(10)))
+
+## 3 - listelerin öğelerine erişmek - ornekler
+
+## ornek_1
+kardiz = "python"   ## karakter dizisi öğelerine erişim
+print(kardiz[0])
+
+
+## ornek_2
+fruits = ["elma","armut","çilek","kiraz"]   ## liste öğelerine erişim
+print(fruits[0])
+
+## tüm öğeleri yazdırmak
+
+for i in fruits:
+    print(i)
+
+
+## ornek_2
+for oge_sirasi in range(len(fruits)):
+    print("{}. {}".format(oge_sirasi, fruits[oge_sirasi]))
+
+## 4 - listelerin öğelerini değiştirmek - ornekler
+
+## ornek_1
+colours_list = ["red","yellow","blue","green","white"]
+print(colours_list)
+colours_list[0] = "black"
+colours_list[2] = "purple"
+print(colours_list)
+
+
+## ornek_2
+numbers_list = [1,2,3]
+print(numbers_list)
+numbers_list[0:len(numbers_list)] = 5,6,7
+print(numbers_list)
+
+## 5 - listelere öğe eklemek - ornekler
+
+## ornek
+numbers_list = [1,2,4,6]
+print(numbers_list+[8])
+print(numbers_list)
+numbers_list = numbers_list + [8]
+print(numbers_list)
+
+## 6 - listeleri birleştirmek - ornekler
+
+## ornek_1
+derlenen_diller   = ["C","C++","C#","Java"]
+yorumlanan_diller = ["Python","Perl","Ruby"]
+programlama_dilleri = derlenen_diller + yorumlanan_diller
+print(programlama_dilleri)
+
+
+## ornek_2 - Kullanıcıdan 10 adet sayı alarak bunların ortalamasını bulan program
+sayilar = 0
+
+for i in range(10):
+    sayilar += int(input("Bir sayı giriniz...:"))
+    
+print("Girdiğiniz sayıların ortalaması....:{}".format(sayilar/10))
+
+
+## ornek_3 - Kullanıcıdan 10 adet sayı alarak bunların ortalamasını bulan program
+## ornek_2 'den farkı girilen sayıları da gösterecek
+sayilar = 0
+sayi_list = []
+
+for i in range(10):
+    
+    girilen_sayi = int(input("{}. sayıyı giriniz...:".format(i+1)))
+    sayilar += girilen_sayi
+    sayi_list += [girilen_sayi]
+
+print("Girdiğiniz sayılar...:", *sayi_list)
+print("Girdiğiniz sayıların ortalaması....:{}".format(sayilar/10))
+
+## 7 - listeden öğe çıkarmak
+
+## ornek
+
+liste = [1,3,4,6,8]
+del liste[-1]
+print(liste)
+
+ output: [1,3,4,6]
+
+## 8 - Listeyi silmek
+
+## ornek
+
+liste = [1,3,4,6,8]
+del liste
+print(liste)
+
+  output: Traceback (most recent call last):
+          File "<stdin>", line 1, in <module>
+          NameError: name 'liste' is not defined
+
+## 9 - listeleri kopyalamak
+
+## ornek_1
+
+list_1 = ["elma","armut","erik"]
+
+list_2 = list_1
+
+print(list_1)   ## output: ["elma","armut","erik"]
+print(list_2)   ## output: ["elma","armut","erik"]
+
+list_1[0] = "şeftali"
+
+print(list_1)   ## output: ["şeftali","armut","erik"]
+print(list_2)   ## output: ["şeftali","armut","erik"]
+print(id(list_1))
+print(id(list_2))
+
+## ornek_2
+
+list_1 = ["elma","armut","erik"]
+
+list_2 = list_1[:]
+
+print(list_1)   ## output: ["elma","armut","erik"]
+print(list_2)   ## output: ["elma","armut","erik"]
+
+list_1[0] = "Şeftali"
+
+print(list_1)   ## output: ["şeftali","armut","erik"]
+print(list_2)   ## output: ["elma","armut","erik"]
+
+
+## ornek_3
+
+list_1 = ["elma","armut","erik"]
+
+list_2 = list(list_1)
+
+print(list_1)   ## output: ["elma","armut","erik"]
+print(list_2)   ## output: ["elma","armut","erik"]
+
+list_1[0] = "Şeftali"
+
+print(list_1)   ## output: ["şeftali","armut","erik"]
+print(list_2)   ## output: ["elma","armut","erik"]
