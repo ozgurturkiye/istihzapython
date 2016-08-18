@@ -50,10 +50,18 @@ liste.count("elma")
 #copy() listeleri, birbirlerini etkilemeyecek şekilde kopyalamak için
 liste_kopya = liste.copy()
 
-#clear() bir listenin içeriğini silmektir.
+#clear() bir listenin içeriğini silmektir. del den farkı içeriği temizler listeyi silmez
+liste = [1, 2, 3, 5, 12, 18]
+liste.clear()  #result: liste = []
 
+#Demetlerin Metotları - Değitirilemez veri tipi olduğu için sadece iki metod var
+dir(tuple)  # 1.index()   2.count() 
+##index()
+demet = ("elma", "armut", "çilek")
+demet.index("elma")  #output: 0  - index nosunu verir
 
-
-
+##count() - Bir öğenin o veri tipinde kaç kez geçtiğini verir
+demet = ("elma", "armut", "elma", "çilek", "elma")
+demet.count("elma") #output: 3
 
 
