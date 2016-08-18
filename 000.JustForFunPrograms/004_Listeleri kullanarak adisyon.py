@@ -12,7 +12,7 @@ cay, kahve, su = 0, 1, 2
 fiyatlar = [2, 5, 1.5]
 
 #Masanın hesabının tutulacağı masa1 listesini oluşturuyoruz.
-masa1 = [i for i in range(len(urunler))]
+masa1 = [0 for i in range(len(urunler))]
 
 #Lets begin
 
@@ -38,15 +38,26 @@ while True:
         print("Masada içilen toplam çay: {}".format(masa1[cay]))
 
     elif soru == "2":
-        sayı3 = int(input("Çıkarma işlemi için ilk sayıyı girin: "))
-        sayı4 = int(input("Çıkarma işlemi için ikinci sayıyı girin: "))
-        print(sayı3, "-", sayı4, "=", sayı3 - sayı4)
+        kahve_adedi = int(input("İçilen kahve adedini girin: "))
+        masa1[kahve] += kahve_adedi
+        print("Masada içilen toplam kahve: {}".format(masa1[kahve]))
 
     elif soru == "3":
-        sayı5 = int(input("Çarpma işlemi için ilk sayıyı girin: "))
-        sayı6 = int(input("Çarpma işlemi için ikinci sayıyı girin: "))
-        print(sayı5, "x", sayı6, "=", sayı5 * sayı6)
+        su_adedi = int(input("İçilen su adedini girin: "))
+        masa1[su] += su_adedi
+        print("Masada içilen toplam su: {}".format(masa1[su]))
 
+    elif soru == "4":
+    	print("Hesaplanıyor....")
+    	print(masa1[cay])
+    	print(fiyatlar[cay])
+    	print(masa1[cay] * fiyatlar[cay])
+    	print("Toplam cay ucreti = {}TL".format(masa1[cay] * fiyatlar[cay]))
+    	print("Toplam kahve ucreti = {}TL".format(masa1[kahve] * fiyatlar[kahve]))
+    	print("Toplam su ucreti = {}TL".format(masa1[su] * fiyatlar[su]))
+    	
+    	#print("Toplam ödenmesi gereken tutar {}TL".format())
+    	#print("Toplam çay fiyatı {}  {}".format(masa1[cay], fiyatlar[cay])
     else:
         print("Yanlış giriş.")
         print("Aşağıdaki seçeneklerden birini giriniz:", giriş)
