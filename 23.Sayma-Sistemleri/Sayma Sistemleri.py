@@ -39,4 +39,5 @@ int('1100', 16)  #output: 4352
 n = '7bc'
 "{} sayısının onlu karşılığı {} sayısıdır.".format(n, int(n, 16))
 #output: '7bc sayısının onlu karşılığı 1980 sayısıdır.'
-
+#Örnek format() metodu uygulama 
+"|{:->10b}|".format(2)  #output: |--------10|
