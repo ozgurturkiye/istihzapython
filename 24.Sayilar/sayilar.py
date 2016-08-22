@@ -27,6 +27,8 @@ c = 12+4j
 c.imag    #output: 4.0
 c.real    #output: 12.0
 # Bu iki metot (imag ve real) parantezsiz kullanılıyor, eğer parantezli yazarsak c değişkenini float sanıyor
+## Aslında real ve imag birer nitelik, metot değil o yüzden () parantezler yok. Nitelik ve metot farkı için ileri
+## konularda açıklık gelecektir.
 
 #Aritmetik Fonksiyonlar
 ##Bilgi: Gömülü fonksiyonlar, Python programlama dilinde,
