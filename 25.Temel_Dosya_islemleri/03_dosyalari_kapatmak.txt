@@ -1,0 +1,18 @@
+Bu tür durumlara karşı iki seçeneğiniz var:
+
+try... except... finally... bloklarından yararlanmak
+with adlı bir deyimi kullanmak
+Birinci yöntemden daha önce de bahsettiğimizi hatırlıyorsunuz. Hata yakalama bölümünü anlatırken bununla ilgili şöyle bir örnek vermiştik:
+
+try:
+    dosya = open("dosyaadı", "r")
+    ...burada dosyayla bazı işlemler yapıyoruz...
+    ...ve ansızın bir hata oluşuyor...
+except IOError:
+    print("bir hata oluştu!")
+finally:
+    dosya.close()
+Bu yöntem gayet uygun ve iyi bir yöntemdir. Ancak Python bize bu tür durumlar için çok daha pratik bir yöntem sunar. Dikkatlice bakın:
+
+with open("dosyaadı", "r") as dosya:
+    print(dosya.read())
