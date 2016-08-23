@@ -1,3 +1,5 @@
+Kaynak: http://belgeler.istihza.com/py3/temel_dosya_islemleri.html
+
 Bu tür durumlara karşı iki seçeneğiniz var:
 
 try... except... finally... bloklarından yararlanmak
