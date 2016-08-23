@@ -1,0 +1,5 @@
+#Dosyaya Erişme Kipleri
+
+Kaynak: http://belgeler.istihza.com/py3/temel_dosya_islemleri.html#dosyaya-erisme-kipleri
+
+
