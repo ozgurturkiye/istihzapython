@@ -1,0 +1,15 @@
+#### Girilen karakterin binary karşılığını yaz
+##
+##karakter   = input("Bir karakter giriniz.....:")
+##kar_ascii  = ord(karakter)
+##kar_binary = bin(kar_ascii)
+##
+##print(kar_binary[2:])
+
+
+## Girilen kelimenin binary karşılığını yaz
+
+kelime   = input("Bir kelime giriniz.....:")
+
+for karakter in kelime:
+    print("{} {} ".format(karakter,bin(ord(karakter))[2:]))
