@@ -29,5 +29,18 @@ print(harf_no)
        ## yanlarına yazan sözlük oluşturmak
 
 isimler = ["ahmet", "mehmet", "fırat", "zeynep", "selma", "abdullah", "cem"]
+harf_sayisi = {}
 
 ## Ornek_1
+
+for i in range(len(isimler)):
+    harf_sayisi[isimler[i]] = len(isimler[i]) 
+
+print(harf_sayisi)
+
+## Ornek_2 - Üstteki yöntem yerine sözlük üreteçleri ile
+
+harf_sayisi_2 = {}
+harf_sayisi_2 = {i: len(i) for i in isimler}
+
+print(harf_sayisi_2)
