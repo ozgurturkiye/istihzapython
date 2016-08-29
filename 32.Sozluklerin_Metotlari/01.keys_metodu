@@ -1,0 +1,9 @@
+## Sözlüklerin Metotları
+
+## keys() metodu
+
+sözlük = {"a": 0,
+          "b": 1,
+          "c": 2,
+          "d": 3}
+print(sözlük.keys())    ## output: dict_keys(['d','b','a','c'])
