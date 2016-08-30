@@ -77,3 +77,19 @@ sözlük = {"kitap"      : "book",
 
 karşılık_bul("kitap", "bilgisayar", "programlama", "fonksiyon", **sözlük)
 ```
+## Basit Örnekler:
+> - Burada veri türlerini ve prinit() fonksiyounu ile * operatörünün kullanımını inceleyiniz
+
+```python
+def args_and_kwargs(*args, **kwargs):
+	print(args, "|", type(args), "|", *args, "|", type(*args))
+	print(kwargs, "|", type(kwargs), "|", *kwargs, "|", type(*kwargs))
+
+args_and_kwargs("argüman1", keyword="value" )
+```
+output: 
+```python
+('argüman1',) | <class 'tuple'> | argüman1 | <class 'str'>
+
+{'keyword': 'value'} | <class 'dict'> | keyword | <class 'str'>
+```
