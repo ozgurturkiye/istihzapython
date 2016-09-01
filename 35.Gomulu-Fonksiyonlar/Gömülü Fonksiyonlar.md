@@ -86,3 +86,53 @@ print(ascii(a))   #output: '\u0131\u015f\u0131k'
 22. **ord()** :Bu fonksiyon, bir karakterin karşılık geldiği ondalık sayıyı verir. Örneğin: `ord('a')   #output: 97`
 23. **oct()** :Bu fonksiyon, bir sayıyı sekizli düzendeki karşılığına çevirmemizi sağlar.
 24. **hex()** :Bu fonksiyon, bir sayıyı onaltılı düzendeki karşılığına çevirmemizi sağlar.
+25. **eval(), exec(), globals(), locals(), compile()** : Kaynakça: http://belgeler.istihza.com/py3/gomulu_fonksiyonlar.html#eval-exec-globals-locals-compile
+26. **enumerate()** :İngilizcede enumerate kelimesi ‘numaralandırmak’ anlamına gelir. enumerate() fonksiyonunun görevi de kelimenin bu anlamıyla aynıdır. Yani bu fonksiyonu kullanarak nesneleri numaralandırabiliriz. Örnek: `list(enumerate('istihza'))   #output: [(0, 'i'), (1, 's'), (2, 't'), (3, 'i'), (4, 'h'), (5, 'z'), (6, 'a')]`
+27. **exit()** :Bu fonksiyon, o anda çalışan programdan çıkmanızı sağlar. Eğer bu komutu etkileşimli kabukta verirseniz o anda açık olan oturum kapanacaktır.
+28. **help()** :fonksiyonu gömülü fonksiyonlar içinde en faydalı fonksiyonların başında gelir. Bu fonksiyonu kullanarak Python programlama diline ait öğelere ilişkin yardım belgelerine ulaşabiliriz. Örneğin:`help(dir)`
+29. **id()** :Python’da her nesnenin bir kimliğinin olduğunu biliyorsunuz. Python’daki her nesnenin kimliği eşşiz, tek ve benzersizdir.
+30. **input()** :bu gömülü fonksiyonu kullanarak kullanıcı ile veri alışverişinde bulunabiliyoruz.
+31. **format()** :
+ Bu gömülü fonksiyonun görevi, daha önce karakter dizilerini işlerken, karakter dizilerinin bir metodu olarak öğrendiğimiz format() metodununa benzer bir şekilde, karakter dizilerini biçimlendirmektir. Ancak format() fonksiyonu, daha önce öğrendiğimiz format() metoduna göre daha dar kapsamlıdır. format() metodunu kullanarak oldukça karmaşık karakter dizisi biçimlendirme işlemlerini gerçekleştirebiliriz, ama birazdan inceleyeceğimiz format() gömülü fonksiyonu yalnızca tek bir değeri biçimlendirmek için kullanılır.
+ `'{:.2f}'.format(12)   #output:12.00`
+32. **filter()** :Bu gömülü fonksiyon yardımıyla dizi niteliği taşıyan nesneler içindeki öğeler üzerinde belirli bir ölçüte göre bir süzme işlemi uygulayabiliriz.
+33. **len()**: Bu fonksiyon yardımıyla nesnelerin uzunluklarını hesaplayabileceğimizi biliyorsunuz.
+34. **map()** : Haritalamaya yarar :) Örnek:
+ ```python
+ def karesini_bul(n):
+	return n ** 2
+
+liste = [1, 4, 5, 4, 2, 9, 10]
+map_liste = list(map(karesini_bul, liste))
+print(map_liste)   #output: [1, 16, 25, 16, 4, 81, 100]
+ ```
+35. **max()** :fonksiyonunun görevi, bir dizi içindeki en büyük öğeyi vermektir. 
+36. **min()** :min() fonksiyonu max() fonksiyonunun tam tersini yapar.
+37. **open()** :Bu fonksiyon herhangi bir dosyayı açmak veya oluşturmak için kullanılır.Bu fonksiyonun formülü şudur:
+ ```python
+ open(dosya_adi, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
+ ```
+38. **pow()** : Daha önceki derslerimizde pek çok kez örneklerini verdiğimiz bu fonksiyon İngilizcedeki power (kuvvet) kelimesinin kısaltmasından oluşur. Adının anlamına uygun olarak, bu fonksiyonu bir sayının kuvvetlerini hesaplamak için kullanıyoruz. Örnek: `pow(2, 3)   #output:8`
+39. **print()** :Bu fonksiyonu, bildiğiniz gibi, kullanıcılarımıza birtakım mesajlar göstermek için kullanıyoruz.
+ ```python
+ print(deg1, deg2, deg3, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
+ ```
+40. **quit()** :Bu fonksiyonu programdan çıkmak için kullanıyoruz. Eğer bu fonksiyonu etkileşimli kabukta verecek olursanız etkileşimli kabuk kapanacaktır.
+41. **range()** :Bu fonksiyonu belli bir aralıktaki sayıları listelemek için kullanıyoruz.
+42. **reversed()** : Tersyüz etmek için
+43. **sorted()** :Bu metot, daha önceki derslerimizden de bildiğiniz gibi, bir dizi içindeki öğeleri belirli bir ölçüte göre sıraya dizmemizi sağlıyor. Bununla ilgili çok basit bir örnek verelim: `sorted('ahmet')   #output:['a', 'e', 'h', 'm', 't']`
+44. **slice()** :birtakım öğelerden oluşan bir nesnenin yalnızca belli kısımlarını ayırıp alma işlemi
+45. **sum()** :Bu fonksiyonun temel görevi, bir dizi içindeki değerlerin toplamını bulmaktır.
+46. **type()**: type() fonksiyonunun görevi bir nesnenin hangi veri tipine ait olduğunu söylemektir.
+47. **zip()** : Kaynakçadan örnekleri inceleyiniz.
+48. **vars()** :u fonksiyon, mevcut isim alanı içindeki metot, fonksiyon ve nitelikleri listeler. Eğer bu fonksiyonu parametresiz olarak kullanırsak, daha önce gördüğümüz locals() fonksiyonuyla aynı çıktıyı elde ederiz. Örnek:
+
+ ```python
+ 
+ vars()
+ vars(str)
+ vars(list)
+ vars(dict)
+ ```
+
+
