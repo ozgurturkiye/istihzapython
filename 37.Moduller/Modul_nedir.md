@@ -37,3 +37,35 @@ os.name      #Bu nitelik, bize kodlarımızın hangi işletim sisteminde çalı�
 import modül_adı as farklı_bir_isim
 ```
 **from modül_adı import isim1, isim2**,
+```python
+from os import name  
+name      # output:'posix' tabi linux veya mac ise
+os.name   #output: NameError: name 'os' is not defined
+#Çünkü biz from os import name komutunu verdiğimizde, os modülünü değil, bu modül içindeki bir nitelik olan name‘i içe aktarmış oluyoruz. Dolayısıyla os ismini kullanamıyoruz.
+```
+Aşağıdaki komutla os modülü içinden yalnızca name niteliğini, listdir() fonksiyonunu ve getcwd() fonksiyonunu aktarmış olduk:
+```python
+from os import name, listdir, getcwd
+listdir()
+getcwd
+listdir()
+```
+**from modül_adı import isim as farklı_isim**
+
+ > Yalnız bu yöntem çok sık kullanılmaz. Bunu da not edip, içe aktarma yöntemlerinin sonuncusuna geçelim.
+```python
+from os import listdir as ld
+```
+**from modül_adı import ***
+
+> Python’daki modülleri from modül_adı import * formülüne göre içe aktarmak da mümkündür (bu yönteme ‘yıldızlı içe aktarma’ diyebilirsiniz). Bu şekilde bir modül içindeki bütün fonksiyon ve nitelikleri içe aktarmış oluruz (ismi _ ile başlayanlar hariç):
+
+```python
+from sys import *
+```
+Böylece sys modülü içindeki bütün fonksiyon ve nitelikleri, başlarına modül adını eklemeye gerek olmadan kullanabiliriz:
+
+```python
+version
+```
+> Ancak bu yöntem pek tavsiye edilmez. Çünkü bu şekilde, modül içindeki bütün isimleri kontrolsüz bir şekilde mevcut ortama ‘boşaltmış’ oluyoruz. 
