@@ -1,0 +1,52 @@
+## Ornek-1
+
+## Lİstedeki tek sayıları bul
+
+sayi_liste = [400, 176, 64, 175, 355, 13, 207, 298, 397, 386, 31, 120, 120, 236,
+241, 123, 249, 364, 292, 153]
+
+##for i in sayi_liste:
+##    if i % 2 == 1:
+##        print(i)
+
+
+def tek_Sayi(sayi):         ## filter() fonksiyonu toplam iki parametre alır. Bu parametrelerden ilki ölçütü belirleyen
+    return sayi % 2 == 1    ## fonksiyon, ikincisi ise bu ölçütün uygulanacagı ögedir. Yandaki örnege baktıgımızda, tek_Sayi()
+                            ## adlı fonksiyonun, sayi_liste adlı öge üzerine uygulandıgını görüyoruz.
+    
+
+print(*filter(tek_Sayi, sayi_liste))
+print(30*"*")
+print([i for i in filter(tek_Sayi, sayi_liste)])
+
+## Ornek-2
+
+## notlar adlı sözlükte bulunan notları istenen notun üzerindeki
+## notları listeleyecek şekilde süzmek
+## örnek: 70 üzeri not alanları bul
+
+
+notlar = {'Ahmet' : 60,
+          'Sinan' : 50,
+          'Mehmet' : 45,
+          'Ceren' : 87,
+          'Selen' : 99,
+          'Cem' : 98,
+          'Can' : 51,
+          'Kezban' : 100,
+          'Hakan' : 66,
+          'Mahmut' : 80}
+
+##def not_durumu(n):
+##    if n in range(0, 50): return 'F'
+##    if n in range(50, 70): return 'D'
+##    if n in range(70, 80): return 'C'
+##    if n in range(80, 90): return 'B'
+##    if n in range(90, 101): return 'A'
+
+suzgec = int(input("Hangi not üzeri notların listelenmesini istiyorsunuz...:"))
+
+def suz(puan):
+    return puan >= suzgec
+
+print(*filter(suz, notlar.values()))
