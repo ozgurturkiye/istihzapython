@@ -13,7 +13,7 @@ liste_1 = kardiz_1.split("\n")
 print(liste_1)
 print("----------------------------------------")
 
-kardiz_2 = open("gorevlendirme_liste.txt")
+kardiz_2 = open("metin_2.txt")
 kardiz_2 = kardiz_2.read()
 kardiz_2 = kardiz_2.replace("I", "ı").replace("i", "i").replace("\t", "").replace(" ", "").lower()
 
