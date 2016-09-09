@@ -23,3 +23,10 @@ print(liste_2)
 #liste_1 ve liste_2 listesini, set metodu ile kümeye dönüştürüp kesişim( & - intersection() ) lerini alıyoruz.
 print("Küme kesişim")
 print(set(liste_1) & set(liste_2))
+
+
+#listeler üzerinde döngü kurarak kontrol
+for i in liste_1:
+  for j in liste_2:
+    if i == j:
+      print("liste 1..:", i, "liste 2..:", j,)
