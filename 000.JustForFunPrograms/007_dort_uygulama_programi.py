@@ -8,7 +8,7 @@
 
 
 #1. Program - Hesap makinası Let's begin :)
-metin == """
+metin = """
 (1) Toplama
 (2) Çıkarma
 (3) Çarpma
@@ -22,33 +22,35 @@ while True:
     try:
         print(metin)
         sec = input("Yapmak İstediğiniz İşlemi Seçiniz: ")
+        
+        def sayi_gir():
+          number1 = int(input("Birinci Sayı: "))
+          number2 = int(input("İkinci Sayı: "))
+          return number1, number2
+        
         if sec == "1":
-            sayi = int(input("Birinci Sayı: "))
-            sayi2 = int(input("İkinci Sayı: "))
-            sonuc = sayi + sayi2
-            print("{} + {} = {}".format(sayi, sayi2, sonuc))
+            sayi1, sayi2 = sayi_gir()
+            sonuc = sayi1 + sayi2
+            print("{} + {} = {}".format(sayi1, sayi2, sonuc))
             input(d)
         elif sec == "2":
-            sayi = int(input("Birinci Sayı: "))
-            sayi2 = int(input("İkinci Sayı: "))
-            sonuc = sayi - sayi2
-            print("{} - {} = {}".format(sayi, sayi2, sonuc))
+            sayi1, sayi2 = sayi_gir()
+            sonuc = sayi1 - sayi2
+            print("{} - {} = {}".format(sayi1, sayi2, sonuc))
             input(d)
         elif sec == "3":
-            sayi = int(input("Birinci Sayı: "))
-            sayi2 = int(input("İkinci Sayı: "))
-            sonuc = sayi * sayi2
-            print("{} * {} = {}".format(sayi, sayi2, sonuc))
+            sayi1, sayi2 = sayi_gir()
+            sonuc = sayi1 * sayi2
+            print("{} * {} = {}".format(sayi1, sayi2, sonuc))
             input(d)
         elif sec == "4":
             try:
-                sayi = int(input("Birinci Sayı: "))
-                sayi2 = int(input("İkinci Sayı: "))
-                sonuc = sayi / sayi2
-                print("{} / {} = {}".format(sayi, sayi2, sonuc))
-                input(d)
+              sayi1, sayi2 = sayi_gir()
+              sonuc = sayi1 / sayi2
+              print("{} / {} = {}".format(sayi1, sayi2, sonuc))
+              input(d)
             except ZeroDivisionError:
-                print("0'a bölünmez")
+              print("0'a bölünmez")
         elif sec == "Q":
             break
         elif sec == "q":
