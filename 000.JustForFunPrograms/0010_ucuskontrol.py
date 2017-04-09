@@ -26,7 +26,7 @@ while True:
             finish_date = int(input("Mesai bitiş tarihi: "))
             return name, start_date, finish_date    
           
-        def istatistikleri_göster():
+        def istatistikleri_goster():
             istatistik_name = input("Kullanıcı adı: ")
             return istatistik_name
           
@@ -43,7 +43,7 @@ while True:
             print("Kullaıcı: {} \nUçuş başlangıç: {} \nUçuş bitiş: {}".format(user_name, work_start_date, work_finish_date))
             input(d)
         elif sec == "3":
-            name = istatistikleri_göster()
+            name = istatistikleri_goster()
             print("Kullaıcı_adı: {}".format(name))
             print("Burada istatistik bilgileri gösterilecek")
             input(d)
