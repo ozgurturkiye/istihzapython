@@ -15,12 +15,12 @@ class Building():
 
 
 trade_center = {"name": "trade_center", 
-           "wood": 19, 
-           "brick": 44, 
-           "iron": 599, 
-           "grain": 498, 
-           "precondition": {"bazaar": 20, "stable": 10}, 
-           "built_time": "15:00:00"}
+                "wood": 19, 
+                "brick": 44, 
+                "iron": 599, 
+                "grain": 498, 
+                "precondition": {"bazaar": 20, "stable": 10}, 
+                "built_time": "15:00:00"}
 
 
 # Sınıfı örneklendirip birkaç deneme yapalım
