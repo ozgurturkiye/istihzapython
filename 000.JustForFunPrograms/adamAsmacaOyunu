@@ -1,0 +1,77 @@
+import random
+
+# Metotlar Başlangıç
+
+def harfTahmini():
+    tahmin = input("lütfen 1 harf tahmin ediniz..:")
+    tahmin = tahmin.lower()
+    return tahmin
+
+def sessizHarfTahmini():
+    tahmin = input("lütfen 1 sessiz harf tahmin ediniz..:")
+    tahmin = tahmin.lower()
+    return tahmin
+
+def sesliHarfTahmini():
+    tahmin = input("lütfen 1 sesli harf tahmin ediniz..:")
+    tahmin = tahmin.lower()
+    return tahmin
+
+def harfKontrol(harf):
+    for i in range(len(kelime)):
+        if bosKelimeListe[i] == "_ ":
+            if harf == kelime[i]:
+                bosKelimeListe[i] = harf + " "
+            else:
+                bosKelimeListe[i] = "_ "
+
+    return bosKelimeListe
+
+def kelimeyiTahminEt():
+    tahminKelime = input("Kelime'yi tahmin edebilir misiniz...:")
+    return tahminKelime
+
+def menuilkTahmin():
+    print("---Bulmaya çalışacağınız kelime {} harften oluşmaktadır----"
+          .format(len(kelime)))
+    print("---Öncelikle 4 sessiz ve 1 sesli harf tahmininizi alayım---")
+
+def ilkTahminleriniz():
+    menuilkTahmin()
+    for i in range(5):
+        if i < 4:
+            harf = sessizHarfTahmini()
+            harf = harf.lower()
+            harfKontrol(harf)
+        else:
+            harf = sesliHarfTahmini()
+            harf = harf.lower()
+            harfKontrol(harf)
+
+#Metotlar Bitiş
+
+#Main
+kelimeler = ["bilgisayar", "kalemtıraş", "kekeme", "motosiklet", "kolonya", "kitap"]
+rastgeleSayi = random.randint(0,5)
+kelime = kelimeler[rastgeleSayi]
+
+bosKelimeListe = []
+for i in range(len(kelime)):
+    bosKelimeListe.append("_ ")
+
+harf = ilkTahminleriniz()
+print("".join(harfKontrol(harf)))
+tahminSayisi = 1
+kalanSansiniz = 5
+while(tahminSayisi < 5):
+    kelimeTahmini = kelimeyiTahminEt()
+    kelimeTahmini = kelimeTahmini.lower()
+    if kelimeTahmini == kelime:
+        print("TEBRİKLER")
+        break
+    else:
+        harf = harfTahmini()
+        harf = harf.lower()
+        print("".join(harfKontrol(harf)))
+        print("Üzgünüm kalan Tahmin sayınız..={}".format((kalanSansiniz - tahminSayisi) - 2))
+        tahminSayisi += 1
