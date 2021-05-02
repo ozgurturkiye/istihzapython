@@ -1,0 +1,49 @@
+diff --git a/original.txt b/original.txt
+index 4394824..7f70ff3 100644
+--- a/original.txt
++++ b/original.txt
+@@ -1,19 +1,17 @@
+ Şunlar
+-birer
+ yanlış
+ kabul
+ edilir:
+ Bir
+-harf
+-yerine
+-başka
+ bir
+ harf
+ yazmak,
+ harf
+ atlamak,
+ kelimeyi
+-bitişik
++yeni
++kelimler
++adsbitişik
+ veya
+ ayrı,
+ fazla
+@@ -62,10 +60,7 @@ harflerin
+ satır
+ üzerinde
+ çıkması,
+-harflerin
+-çok
+-silik
+-olması,
++lması,
+ birbiri
+ üstüne
+ binmiş
+@@ -88,6 +83,8 @@ yerde
+ küçük
+ harf
+ yazmak,
++asdf
++asdf
+ bir
+ satırı
+ tümüyle
+152
